@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DvaidCh MnPg</title>
+	<style type="text/css">
+		body{
+			background: linear-gradient(10deg, #fc97e0 35%, #131454 40%, #131454 45%, #c0d1ab );
+			height: 100vh;
+			 background-repeat: no-repeat;
+    background-attachment: fixed;
+		}
+		.projCard{
+			height:fit-content; 
+			
+			border: 5px dotted ;
+			border-color: #131454 ;
+			border-radius: 5%;
+			background: rgba(255,100,100,0.45);
+			color:darkblue;
+			text-align: end;
+			margin: 5px;
+		}
+		
+		.title{
+			color: floralwhite;
+			font-size: 25pt;
+			cursor:pointer;
+			text-align: center;
+			display: block;
+		}
+		.title:hover{
+			color: palegoldenrod;
+		}
+		.screenshot{
+			width: 150px;height: 150px;
+			background-repeat: no-repeat;
+			float: left;
+			margin: 5px;
+			border: 0;
+			border-radius: 50%;
+			cursor:pointer;
+			}
+		.text{
+			white-space: pre-line;
+			width:100%;
+			hyphens:auto;
+			word-break:break-word;
+			margin: 5px;
+			cursor:pointer;
+			text-align: start;
+			text-shadow: rgba(255,100,100,0.8) 1px 0 10px;
+		}
+		.srcLink{
+			color: floralwhite;
+			border-radius: 25%;
+			border-bottom: floralwhite double;
+			cursor:pointer;
+			white-space: pre-line;
+			hyphens:auto;
+			word-break:break-word;
+			width: fit-content;
+			
+		}
+		.srcLink:hover{
+			color: palegoldenrod;
+			border-bottom: palegoldenrod double;
+		}
+	</style>
+	<script type="text/javascript">
+		function openInNewTab(url) {
+  			window.open(url, '_blank').focus();
+		}
+		function addProjCard(Title,ImgPath,Text,AppUrl,SrcUrl){
+			var projCard=document.createElement("div");
+			var title=document.createElement("b2");
+			var img=document.createElement("img");
+			var text=document.createElement("div");
+			var srcCode=document.createElement("b");
+			srcCode.innerHTML="sourceCode";
+			text.innerHTML=Text;
+			img.src=ImgPath;
+			title.innerHTML=Title;
+			title.classList.add("title");
+			projCard.classList.add("projCard");
+			text.classList.add("text");
+			img.classList.add("screenshot");
+			srcCode.classList.add("srcLink");
+			img.onclick=function(){openInNewTab(AppUrl)};
+			title.onclick=function(){openInNewTab(AppUrl)};			
+			text.onclick=function(){openInNewTab(AppUrl)};
+			srcCode.onclick=function(){openInNewTab(SrcUrl)};
+			projCard.appendChild(img);
+			projCard.appendChild(title);
+			projCard.appendChild(text);
+			projCard.appendChild(srcCode);
+			document.body.appendChild(projCard);
+			return projCard;
+		}
+	</script>
+</head>
+<body>
+		<script type="text/javascript">
+			addProjCard("JRPG Map Generator","mapGen.png","generates maps in pixelart style.\n first two params -- mapSize/10px, \nthird -- hypothetical count of \"Islands\",\n last -- maximum possible size of \"island part\"\n\n","https://dvaidch.github.io/genericJRPG/","https://github.com/DvaidCh/genericJRPG");
+			addProjCard("Lords and Lands: Lands of Mercenaries","LnL.png","digital version of never relised tabletop startegy game.\n rightMouseButton(or longtap, or any other contextMenu) on unit card to see its description.\n to select unit card click on it and then click on target(on land card to move and conqure or on enemy unit card to attack). yellow box is a Shop where you can buy new cards(click on them and then on land card where you want to put)\n\n","https://dvaidch.github.io/LordsAndLands-Lands-of-Mercenaries/","https://github.com/DvaidCh/LordsAndLands-Lands-of-Mercenaries");
+			addProjCard("Система боя толп для ДнД 5е","dnd Mobs mechanics.png","инструкция в тхт файле в соурсах\n\n\n\n\n","https://dvaidch.github.io/mein-DnD-5e-Mob-Mechanica-for-really-big-Mobs-/","https://github.com/DvaidCh/mein-DnD-5e-Mob-Mechanica-for-really-big-Mobs-");
+		</script>
+</body>
+</html>
