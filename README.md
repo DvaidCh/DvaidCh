@@ -1,7 +1,5 @@
 - 👋 Hi, I’m @DvaidCh
-- 👀 I’m interested in gamedev
 - 🌱 I’m currently learning js+css+html, wc3 map editor, sfml, c++, c#+wpf
-- 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me: davidchugunov00@gmail.com, t.me/mindbrake
 
 <!---
